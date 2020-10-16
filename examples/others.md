@@ -26,7 +26,7 @@
           subtTotal :    req.cart.subTotal(),
           total:         req.cart.total(),
           content:       req.cart.content(),
-          totalQuantity: req.cart.totalQuantit(),
+          totalQuantity: req.cart.totalQuantity(),
           count:         req.cart.count(),
       }
 

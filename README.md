@@ -156,8 +156,16 @@ If you want to switch instances, you just call `req.cart.add( Options, 'otherIns
 So a little example:
 
 ```js
+    const options = { 
+               id: 223, 
+               name: 'mouse',
+               price: 8900, 
+               quantity: 1, 
+               preview: 'http://myimages/src/google.png', 
+               attributes: [] 
+               };
     // add product to the 'music' cart
-    req.cart.add( Options, 'music')
+    req.cart.add(options, 'music')
 
     // Get the content of the 'music' cart
     req.cart.content('music')

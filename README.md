@@ -44,13 +44,12 @@ Adding an item to the cart is really simple, you just use the `add()` method, wh
 
 this Options object contains the following keys
  
-    *
-       id: product id (required and unique),
-       name: product name (required),
-       price: cost of product  (required),
-       quantity: quantity of product (required, 
-       preview: url to any resource (optional),
-       attributes : extra details you want to add (optional) 
+   * id:       product id (required and unique),
+   * name:     product name (required),
+   * price:    cost of product  (required),
+   * quantity: quantity of product (required, 
+   * preview:  url to any resource (optional),
+   * attributes : extra details you want to add (optional) 
   
     
 ```js

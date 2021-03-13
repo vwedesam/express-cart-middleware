@@ -90,7 +90,7 @@ To remove an item for the cart, you'll again need the product Id.
 ### cart.get( [ productId ])
 
 * productId < Integer >
-*
+
 If you want to get an item from the cart using its product id, you can simply call the `get()` method on the cart and pass it the product id.
 
 ```js
@@ -99,7 +99,10 @@ If you want to get an item from the cart using its product id, you can simply ca
  req.cart.get(productId);
 ```
 
-### cart.content()
+### cart.content([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Array >
 
 Of course you also want to get the carts content. This is where you'll use the `content` method. This method will return a Collection of CartItems which you can iterate over and show the content to your customers.
 
@@ -107,7 +110,10 @@ Of course you also want to get the carts content. This is where you'll use the `
  req.cart.content();
 ```
 
-### cart.checkout()
+### cart.checkout([ instance ])
+
+* instance: < string > __optional__
+* Returns: <  >
 
 If you want to completely remove the content of a cart, you can call the destroy method on the cart. This will remove all CartItems from the cart for the current cart instance.
 
@@ -115,7 +121,10 @@ If you want to completely remove the content of a cart, you can call the destroy
  req.cart.checkout();
 ```
 
-### total()
+### total([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Integer >
 
 The `total()` method can be used to get the calculated total of all items in the cart, given there price and quantity.
 
@@ -123,7 +132,10 @@ The `total()` method can be used to get the calculated total of all items in the
  req.cart.total();
 ```
 
-### cart.tax()
+### cart.tax([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Integer >
 
 The `tax()` method can be used to get the calculated amount of tax for all items in the cart, given there price and quantity.
 
@@ -131,7 +143,10 @@ The `tax()` method can be used to get the calculated amount of tax for all items
  req.cart.tax();
 ```
 
-### cart.subTotal()
+### cart.subTotal([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Integer >
 
 The `subTotal()` method can be used to get the total of all items in the cart, minus the total amount of tax. 
 
@@ -139,7 +154,10 @@ The `subTotal()` method can be used to get the total of all items in the cart, m
  req.cart.subTotal();
 ```
 
-### cart.count()
+### cart.count([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Integer >
 
 If you want to know how many items there are in your cart, you can use the `count()` method. This method will return the total number of items in the cart. So if you've added 2 books and 1 shirt, it will return 3 items.
 
@@ -147,7 +165,10 @@ If you want to know how many items there are in your cart, you can use the `coun
   req.cart.Count();
 ```
 
-### cart.totalQuantity()
+### cart.totalQuantity([ instance ])
+
+* instance: < string > __optional__
+* Returns: < Integer >
 
 
 ```js

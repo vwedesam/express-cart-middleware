@@ -36,11 +36,11 @@ Look at one of the following topics to learn more about Express Shopping Cart Mi
 
 The shoppingcart gives you the following methods to use:
 
-### add()
+### add( [ options ] )
 
 Adding an item to the cart is really simple, you just use the `add()` method, which accepts an Options Object.
  
-### Options (required)
+* Options < Object >
 
 this Options object contains the following keys
  
@@ -53,10 +53,16 @@ this Options object contains the following keys
   
     
 ```js
+ const options = {} // keys
+ 
  req.cart.add(options);
+ 
 ```
 
-### update()
+### update( [productId, [ data]] )
+
+* productId < Integer >
+* data < Object >
 
 To update an item in the cart, you'll first need the product Id of the item.
 Next you can use the `update()` method to update it.
@@ -69,7 +75,9 @@ If you simply want to update the quantity, you'll pass to the update method the 
  req.cart.update(productId, { quantity: 19 }); // Will update the quantity
 ```
 
-### remove()
+### remove( [ productId ])
+
+* productId < Integer >
 
 To remove an item for the cart, you'll again need the product Id. 
 
@@ -79,8 +87,10 @@ To remove an item for the cart, you'll again need the product Id.
  req.cart.remove(productId);
 ```
 
-### get()
+### get( [ productId ])
 
+* productId < Integer >
+*
 If you want to get an item from the cart using its product id, you can simply call the `get()` method on the cart and pass it the product id.
 
 ```js

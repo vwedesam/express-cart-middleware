@@ -36,7 +36,7 @@ Look at one of the following topics to learn more about Express Shopping Cart Mi
 
 The shoppingcart gives you the following methods to use:
 
-### add( [ options ] )
+### cart.add( [ options ] )
 
 Adding an item to the cart is really simple, you just use the `add()` method, which accepts an Options Object.
  
@@ -59,7 +59,7 @@ this Options object contains the following keys
  
 ```
 
-### update( [productId, [ data]] )
+### cart.update( [productId, [ data]] )
 
 * productId < Integer >
 * data < Object >
@@ -75,7 +75,7 @@ If you simply want to update the quantity, you'll pass to the update method the 
  req.cart.update(productId, { quantity: 19 }); // Will update the quantity
 ```
 
-### remove( [ productId ])
+### cart.remove( [ productId ])
 
 * productId < Integer >
 
@@ -87,7 +87,7 @@ To remove an item for the cart, you'll again need the product Id.
  req.cart.remove(productId);
 ```
 
-### get( [ productId ])
+### cart.get( [ productId ])
 
 * productId < Integer >
 *
@@ -99,7 +99,7 @@ If you want to get an item from the cart using its product id, you can simply ca
  req.cart.get(productId);
 ```
 
-### content()
+### cart.content()
 
 Of course you also want to get the carts content. This is where you'll use the `content` method. This method will return a Collection of CartItems which you can iterate over and show the content to your customers.
 
@@ -107,7 +107,7 @@ Of course you also want to get the carts content. This is where you'll use the `
  req.cart.content();
 ```
 
-### checkout()
+### cart.checkout()
 
 If you want to completely remove the content of a cart, you can call the destroy method on the cart. This will remove all CartItems from the cart for the current cart instance.
 
@@ -123,7 +123,7 @@ The `total()` method can be used to get the calculated total of all items in the
  req.cart.total();
 ```
 
-### tax()
+### cart.tax()
 
 The `tax()` method can be used to get the calculated amount of tax for all items in the cart, given there price and quantity.
 
@@ -131,7 +131,7 @@ The `tax()` method can be used to get the calculated amount of tax for all items
  req.cart.tax();
 ```
 
-### subTotal()
+### cart.subTotal()
 
 The `subTotal()` method can be used to get the total of all items in the cart, minus the total amount of tax. 
 
@@ -139,7 +139,7 @@ The `subTotal()` method can be used to get the total of all items in the cart, m
  req.cart.subTotal();
 ```
 
-### count()
+### cart.count()
 
 If you want to know how many items there are in your cart, you can use the `count()` method. This method will return the total number of items in the cart. So if you've added 2 books and 1 shirt, it will return 3 items.
 
@@ -147,7 +147,7 @@ If you want to know how many items there are in your cart, you can use the `coun
   req.cart.Count();
 ```
 
-### totalQuantity()
+### cart.totalQuantity()
 
 
 ```js

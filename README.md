@@ -44,16 +44,16 @@ Adding an item to the cart is really simple, you just use the `add()` method, wh
 
 this Options object contains the following keys
  
-   * id:       product id (required and unique),
-   * name:     product name (required),
-   * price:    cost of product  (required),
-   * quantity: quantity of product (required, 
-   * preview:  url to any resource (optional),
-   * attributes : extra details you want to add (optional) 
+   * __id:__       product id (required and unique),
+   * __name:__     product name (required),
+   * __price:__    cost of product  (required),
+   * __quantity:__ quantity of product (required, 
+   * __preview:__  url to any resource (optional),
+   * __attributes__ : extra details you want to add (optional) 
   
     
 ```js
- const options = {} // keys
+ const options = { id, name, price, quantity, preview, attributes } // keys
  
  req.cart.add(options);
  
